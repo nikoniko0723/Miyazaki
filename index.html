@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WELL QUEST</title>
+    <link rel="stylesheet" href="css/style.css?v=8">
+    <script>
+        window.onerror = function(message, source, lineno, colno, error) {
+            const div = document.createElement('div');
+            div.style.position = 'fixed';
+            div.style.top = '0';
+            div.style.left = '0';
+            div.style.width = '100%';
+            div.style.background = '#ef4444';
+            div.style.color = '#ffffff';
+            div.style.padding = '12px';
+            div.style.zIndex = '99999';
+            div.style.fontSize = '12px';
+            div.style.fontFamily = 'monospace';
+            div.style.whiteSpace = 'pre-wrap';
+            div.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+            div.innerHTML = '<strong>🚨 RUNTIME EXCEPTION:</strong> ' + message + '<br>📍 Location: ' + source + ' [Line ' + lineno + ', Col ' + colno + ']<br><pre style="margin-top:6px; background:#7f1d1d; padding:6px; border-radius:4px; overflow-x:auto;">' + (error ? error.stack : 'No stack trace available') + '</pre>';
+            document.body.appendChild(div);
+            return false;
+        };
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- Scripts -->
+    <script src="js/GameState.js?v=8"></script>
+    <script src="js/AudioManager.js?v=8"></script>
+    <script src="js/SceneManager.js?v=8"></script>
+    <script src="js/scenes/TitleScene.js?v=8"></script>
+    <script src="js/scenes/CreateScene.js?v=8"></script>
+    <script src="js/scenes/MainHubScene.js?v=8"></script>
+    <script src="js/scenes/WorldMapScene.js?v=8"></script>
+    <script src="js/scenes/ReportScene.js?v=8"></script>
+    <script src="js/scenes/PartnerScene.js?v=8"></script>
+    <script src="js/scenes/BattleSceneV2.js?v=8"></script>
+    <script src="js/scenes/ShopScene.js?v=8"></script>
+    <script src="js/scenes/QuestScene.js?v=8"></script>
+    <script src="js/scenes/FriendScene.js?v=8"></script>
+    <script src="js/scenes/AdminScene.js?v=8"></script>
+    <script src="js/main.js?v=8"></script>
+</body>
+</html>
